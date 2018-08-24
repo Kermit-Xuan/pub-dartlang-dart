@@ -78,11 +78,7 @@ class Configuration {
 
   /// Create a configuration based on the environment variables.
   factory Configuration.fromEnv(EnvConfig env) {
-    if (env.gcloudProject == 'dartlang-pub-dev') {
-      return new Configuration._dev();
-    } else {
-      return new Configuration._prod();
-    }
+    return new Configuration._local('flutter-pub');
   }
 }
 
